@@ -18,7 +18,6 @@ data class FunctionCallTransactionResponse(
         @JvmName("create")
         fun Response.toFunctionCallTransactionResponse(): FunctionCallTransactionResponse {
             val gson = Gson()
-//            Log.i("TransactionResponse", this.toString() + " " + this.body?.string() +   " " + this.isSuccessful);
             if (this.isSuccessful) {
                 this.body?.let {
                     return gson.fromJson(it.string(), FunctionCallTransactionResponse::class.java)

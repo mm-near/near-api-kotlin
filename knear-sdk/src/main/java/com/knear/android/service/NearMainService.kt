@@ -79,6 +79,7 @@ class NearMainService(val activity: Activity) {
         this.updateKeyStore();
     }
 
+
     fun login(email: String) {
         this.androidKeyStore.setAccountId(email)
         this.androidKeyStore.setNetworkId(networkId)
